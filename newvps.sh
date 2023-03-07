@@ -21,3 +21,6 @@ sudo apt-get install fonts-arphic-bkai00mp fonts-arphic-bsmi00lp fonts-arphic-gb
 
 pip install shadowsocks
 sudo sed -i "s/CIPHER_CTX_cleanup/CIPHER_CTX_reset/g" /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
+
+wget https://github.com/marklma/newvps/raw/main/shadowsocks.json
+sudo nano ./shadowsocks.json
