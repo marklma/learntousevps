@@ -12,9 +12,10 @@ sudo apt-get install lxpolkit -y
 sudo apt-get install gnome-system-tools -y
 sudo apt-get install udisks2 -y
 sudo apt-get install gnome-disk-utility -y
-sudo apt-get install lxde-core -y
+#sudo apt-get install lxde-core -y
 sudo apt-get install lxde -y
-sudo apt-get install xrdp -y
+sudo apt-get install tightvncserver -y
+#sudo apt-get install xrdp -y
 sudo apt-get purge xterm
 sudo apt-get install language-pack-zh-hans -y
 sudo apt-get install fonts-arphic-bkai00mp fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-ukai -y
