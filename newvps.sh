@@ -1,4 +1,7 @@
 #!/bin/bash
+sudo sed "li DNS=8.8.8.8" /etc/systemd/resolved.conf
+sudo systemctl restart systemd-resolved.service
+
 wget https://github.com/marklma/newvps/raw/main/sources.list
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo mv ./sources.list /etc/apt/sources.list
