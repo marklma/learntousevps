@@ -28,11 +28,11 @@ sudo sed -i "s/CIPHER_CTX_cleanup/CIPHER_CTX_reset/g" /usr/local/lib/python2.7/d
 
 sudo apt clean
 
-echo 'nameserver 4.2.2.2' >> /etc/resolvconf/resolv.conf.d/base
-echo 'nameserver 8.8.4.4' >> /etc/resolvconf/resolv.conf.d/base
-resolvconf -u
+sudo echo 'nameserver 4.2.2.2' >> /etc/resolvconf/resolv.conf.d/base
+sudo echo 'nameserver 8.8.4.4' >> /etc/resolvconf/resolv.conf.d/base
+sudo resolvconf -u
 
-sudo sed "li DNS=8.8.8.8" /etc/systemd/resolved.conf
+sudo echo 'DNS=8.8.8.8' >> /etc/systemd/resolved.conf
 sudo systemctl restart systemd-resolved.service
 
 wget https://github.com/marklma/newvps/raw/main/shadowsocks.json
