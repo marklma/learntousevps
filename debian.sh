@@ -19,6 +19,12 @@ sudo apt-get install xrdp xorgxrdp -y
 sudo adduser xrdp ssl-cert
 sudo apt-get purge xterm
 
+
+apt-get install iptables
+apt-get install iptables-persistent
+netfilter-persistent save
+netfilter-persistent reload
+
 sudo apt-get install language-pack-zh-hans language-pack-zh-hant-base language-pack-zh-hant language-pack-zh-hans -y
 sudo apt-get install fonts-arphic-bkai00mp fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-ukai ttf-wqy-zenhei  zhcon  -y
 
@@ -35,6 +41,8 @@ sudo useradd -d /home/mark -m -s /bin/bash mark
 chmod u+w /etc/sudoers
 sudo echo 'mark ALL=(ALL) ALL' >> /etc/sudoers
 chmod u-w /etc/sudoers
+
+sudo echo 'ssh: ALL' >> /etc/hosts.allow
 
 sudo apt clean
 
