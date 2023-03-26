@@ -1,10 +1,12 @@
 #!/bin/bash
 
+screen
+screen -ls
+
 mv /etc/localtime /etc/localtime.bak
 ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-screen
-screen -ls
+
 
 sudo apt-get update
 sudo apt-get upgrade -y
